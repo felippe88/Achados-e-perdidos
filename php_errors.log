@@ -1,0 +1,1 @@
+[27-May-2018 23:54:45 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/projeto/app/Http/Controllers/CurriculoController.php on line 3
