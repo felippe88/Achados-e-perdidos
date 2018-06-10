@@ -33,7 +33,7 @@ class CadastroController extends Controller
       return view('cadastro');
       
       
-      
+      ///Forma de fazer sem a model:
       /* $insert = $this->usuario->insert([
         'matricula' =>    $_POST['matricula'],
         'nome' =>         $_POST['nome'],

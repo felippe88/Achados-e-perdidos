@@ -1,1 +1,23 @@
 [27-May-2018 23:54:45 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/projeto/app/Http/Controllers/CurriculoController.php on line 3
+[09-Jun-2018 00:20:23 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:218
+Stack trace:
+#0 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(396): Illuminate\Support\Facades\Facade::__callStatic('replaceNamespac...', Array)
+#1 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(373): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#2 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(288): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#3 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(187): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKer in /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 218
+[09-Jun-2018 00:20:47 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:218
+Stack trace:
+#0 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(396): Illuminate\Support\Facades\Facade::__callStatic('replaceNamespac...', Array)
+#1 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(373): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#2 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(288): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#3 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(187): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKer in /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 218
+[09-Jun-2018 00:20:59 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:218
+Stack trace:
+#0 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(396): Illuminate\Support\Facades\Facade::__callStatic('replaceNamespac...', Array)
+#1 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(373): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#2 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(288): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#3 /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(187): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKer in /home/ubuntu/workspace/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 218
+[09-Jun-2018 01:53:35 UTC] PHP Fatal error:  Trait 'Illuminate\Notification\Notifiable' not found in /home/ubuntu/workspace/projeto/app/User.php on line 11
+[09-Jun-2018 01:55:22 UTC] PHP Fatal error:  Trait 'Illuminate\Notification\Notifiable' not found in /home/ubuntu/workspace/projeto/app/User.php on line 11
+[09-Jun-2018 13:23:29 UTC] PHP Fatal error:  Trait 'Illuminate\Notification\Notifiable' not found in /home/ubuntu/workspace/projeto/app/User.php on line 11
+[09-Jun-2018 13:23:38 UTC] PHP Fatal error:  Trait 'Illuminate\Notification\Notifiable' not found in /home/ubuntu/workspace/projeto/app/User.php on line 11

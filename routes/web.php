@@ -15,14 +15,27 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('painel', 'ObjetosController@getPainel')->name('painel');
+
+Route::get('logout', 'ObjetosController@logout')->name('logout');
+
+Route::post('painel/cadastrar', 'ObjetosController@createObj')->name('cadastrar');
 
 
 Route::get('cadastro', 'CadastroController@getIndex')->name('cadastro');
 
 Route::post('cadastro/salvar', 'CadastroController@createUser')->name('create');
-  
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::post('/login', ['as' => 'user.login', 'uses' => 'HomeController@login']);
+
+
+
+  
+
+
+
 

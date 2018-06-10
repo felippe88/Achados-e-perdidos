@@ -66,14 +66,14 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .copyright {clear: both; padding: 8px; border-top: 1px solid #CCC; font-size: 13px; background: #f2f2f2; box-shadow: 0 0 3px #B1AFAF;}
 .topNav{padding: 0;border-bottom: 1px solid #CCC;background: #f2f2f2;box-shadow: 0 0 3px #B1AFAF;}
 .topNav a{color:#333; font-size:12px; font-weight:bold; display:inline-block;  padding:8px 4px;}
-.topNav a:hover, .topNav a.active{color:#fff; background:#f89406; text-decoration:none}
+.topNav a:hover, .topNav a.active{color:#fff; background:#5bc0de; text-decoration:none}
 .socialNw a{width:24px; height:24px; line-height:24px; display:inline-block; padding:3px; margin-top:3px; font-size:21px; border-radius:50%; background:#999; color:#fff; text-align:center; }
 .cntr{text-align:center}
 .cart{border:1px solid #ddd;  }
 #sidebar ul {margin: 0;padding: 0;}
 #sidebar .alert {padding: 8px;}
 #sidebar .nav a{color:#000}
-#sidebar .nav a:hover{color:#f89406}
+#sidebar .nav a:hover{color:#5bc0de}
 #sidebar .cart{border:1px solid #B94A48; }
 #sidebar h4{margin:0;  line-height:1.5em; padding:0 13px;  }
 #sidebar h2{font-size:21px; line-height:21px;}
@@ -98,13 +98,14 @@ hr.soften {margin: 8px 0;background: #DDD;}
 #newProductCar .carousel-control.right {right: 8px; left: auto;}
 #newProductCar .carousel-control.left {right: 38px; left: auto;}
 #newProductCar{margin-bottom:0}
-.zoomTool{width:120px; height:34px; font-size:14px; font-weight:bold; line-height:34px; text-align:center; color:#fff; border-radius:2px; background:#f89406; position:absolute; left:50%; top:44%; margin-left:-60px; z-index:999; display:none}.thumbnail{background:#fff}
+.zoomTool{width:120px; height:34px; font-size:14px; font-weight:bold; line-height:34px; text-align:center; color:#fff; border-radius:2px; background:#5bc0de; position:absolute; left:50%; top:44%; margin-left:-60px; z-index:999; display:none}.thumbnail{background:#fff}
 .zoomTool:hover{color:#fff; text-decoration:none; }
 .thumbnail>a.overlay, .thumbnail>a.zoomTool {display:none;}
-.shopBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;color: #fff;border-radius: 2px;background: #f89406;display:inline-block;padding:0 12px;border:0;}
+.shopBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;color: #fff;border-radius: 2px;background: #5bc0de;display:inline-block;padding:0 12px;border:0;}
 .defaultBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;border-radius: 2px;display:inline-block;padding:0 12px;color: #666;text-decoration: none;background: #e6e6e6;border:0;}
 .shopBtn:hover {color: #fff; text-decoration:none; background:#F86706}
 .gotop {background-color: #000000;display: none;position: fixed;bottom: 30px;right: 30px;padding: 0px 10px 5px;color: #fff;text-decoration: none;font-size: 30px;line-height: 34px;}
 .gotop:hover {color: #fff;text-decoration: none;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
 #gototop{margin-top:1px;}
 #footerMenu a{ font-size:12px; text-transform:lowercase}
+

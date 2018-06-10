@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Achados e Perdidos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Achados e perdidos">
+    <meta name="author" content="Topicos especiais">
     <!-- Bootstrap styles -->
     <link href="https://achados-e-perdidos-felippe88.c9users.io/assets/css/bootstrap.css" rel="stylesheet"/>
     <!-- Customize styles -->
@@ -33,10 +33,10 @@ Lower Header Section
 <div id="gototop"> </div>
 <header id="header">
 <div class="row">
-	<div class="span4">
+	<div class="span8">
 	<h1>
 	<a class="logo" href="index.html"><span>Achados e perdidos</span> 
-		<img src="assets/img/logo-bootstrap-shoping-cart.png" alt="bootstrap sexy shop">
+		<img src="assets/img/banner.jpg" alt="Achados e perdidos">
 	</a>
 	</h1>
 	</div>
@@ -52,7 +52,7 @@ Lower Header Section
 <!--
 Navigation Bar Section 
 -->
-@extends('layouts.app')
+
 <div class="navbar">
 	  <div class="navbar-inner">
 		<div class="container">
@@ -63,9 +63,9 @@ Navigation Bar Section
 		  </a>
 		  <div class="nav-collapse">
 			<ul class="nav">
-			  <li class="active"><a href="home">Home</a></li>
+			  <li class=""><a href="home">Home</a></li>
 			  <li class=""><a href="cadastro">Cadastro</a></li>
-			  <li class=""><a href="list-view.html">Contato</a></li>
+			  <li class=""><a href="contato">Contato</a></li>
 			  
 			</ul>
 			<form action="#" class="navbar-search pull-left col-sm-4">
@@ -75,21 +75,29 @@ Navigation Bar Section
 			<li class="dropdown">
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
 				<div class="dropdown-menu">
-				<form class="form-horizontal loginFrm">
+					
+					
+				
+				{!! Form::open(['route' => 'user.login','method' => 'post', 'class' => 'form-horizontal loginFrm']) !!}
 				  <div class="control-group">
-					<input type="text" class="span2" id="inputEmail" placeholder="Email">
+				  	{!! Form::text('matricula',null, ['class' => 'span2','placeholder' => "Matricula"])  !!}
+					
 				  </div>
 				  <div class="control-group">
-					<input type="password" class="span2" id="inputPassword" placeholder="Password">
+				  	{!! Form::password('senha',['class' => 'span2','placeholder' => 'Senha'])!!}
+					
 				  </div>
 				  <div class="control-group">
-					<label class="checkbox">
-					<input type="checkbox"> Remember me
-					</label>
-					<button type="submit" class="shopBtn btn-block">Sign in</button>
+					
+					{!! Form::submit('Entrar',['class' => 'shopBtn btn-block'])!!}
+					
 				  </div>
-				</form>
+				
+				{{ Form::close() }}
 				</div>
+				
+				
+				
 			</li>
 			</ul>
 		  </div>
@@ -103,39 +111,19 @@ Body Section
 <div id="sidebar" class="span3">
 
 
-			<div class="well well-small" ><a href="#"><img src="assets/img/paypal.jpg" alt="payment method paypal"></a></div>
+			<div class="well-small" ><a href="http://validador.ipv6.br/index.php?lang=pt&site=faccat.br&uri=referer"><img alt="Este S&iacute;tio Web &eacute; acess&iacute;vel via IPv6!" src="http://validador.ipv6.br/ipv6-globo.php"></a></div>
 			
-			<a class="shopBtn btn-block" href="#">Upcoming products <br><small>Click to view</small></a>
+			<a class="shopBtn btn-block" href="cadastro">Bem vindo! <br><small>Já é membro? Cadastra-se!</small></a>
 			<br>
 			<br>
 			<ul class="nav nav-list promowrapper">
-			<li>
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="assets/img/bootstrap-ecommerce-templates.png" alt="bootstrap ecommerce templates">
-				<div class="caption">
-				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
-				</div>
-			  </div>
-			</li>
+		
 			<li style="border:0"> &nbsp;</li>
 			<li>
 			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="assets/img/shopping-cart-template.png" alt="shopping cart template">
-				<div class="caption">
-				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
-				</div>
-			  </div>
-			</li>
-			<li style="border:0"> &nbsp;</li>
-			<li>
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="assets/img/bootstrap-template.png" alt="Achados e perdidos">
-				<div class="caption">
-				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
-				</div>
+				
+				<a href="http://faccat.br" title="faccat"><img src="assets/img/faccat.png" alt="Achados e perdidos"></a>
+				
 			  </div>
 			</li>
 		  </ul>
@@ -145,118 +133,42 @@ Body Section
 	<div class="well np">
 		<div id="myCarousel" class="carousel slide homCar">
             <div class="carousel-inner">
+ 			
+    		
+    		@forelse( $objetos as $objeto )
+    		
 			  <div class="item">
-                <img style="width:100%" src="assets/img/bootstrap_free-ecommerce.png" alt="bootstrap ecommerce templates">
-                <div class="carousel-caption">
-                      <h4>Bootstrap shopping cart</h4>
-                      <p><span>Very clean simple to use</span></p>
-                </div>
+        			<img class="img-fluid" style="width:100%" src="{{ $objeto->imagem }}">
+	    		  	<div class="carousel-caption">
+	                      <h4>{{ $objeto->nome }}</h4>
+	                      <p><span>{{ $objeto->descricao }}</span></p>
+	                </div>
               </div>
-			  <div class="item">
-                <img style="width:100%" src="assets/img/carousel1.png" alt="bootstrap ecommerce templates">
-                <div class="carousel-caption">
-                      <h4>Bootstrap Ecommerce template</h4>
-                      <p><span>Highly Google seo friendly</span></p>
-                </div>
-              </div>
-			  <div class="item active">
-                <img style="width:100%" src="assets/img/carousel3.png" alt="bootstrap ecommerce templates">
-                <div class="carousel-caption">
-                      <h4>Twitter Bootstrap cart</h4>
-                      <p><span>Very easy to integrate and expand.</span></p>
-                </div>
-              </div>
-              <div class="item">
-                <img style="width:100%" src="assets/img/bootstrap-templates.png" alt="bootstrap templates">
-                <div class="carousel-caption">
-                      <h4>Bootstrap templates integration</h4>
-                      <p><span>Compitable to many more opensource cart</span></p>
-                </div>
-              </div>
+    		@empty
+    		<p>nada</p>
+    		@endforelse
+			
+			
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
         </div>
+        
 <!--
 New Products
 -->
 	<div class="well well-small">
-	<h3>New Products </h3>
+	<h3>Objetos perdidos </h3>
 	<hr class="soften"/>
 		<div class="row-fluid">
-		<div id="newProductCar" class="carousel slide">
-            <div class="carousel-inner">
-			<div class="item active">
-			  <ul class="thumbnails">
-				<li class="span3">
-				<div class="thumbnail">
-					<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-					<a href="#" class="tag"></a>
-					<a href="product_details.html"><img src="assets/img/bootstrap-ring.png" alt="bootstrap-ring"></a>
-				</div>
-				</li>
-				<li class="span3">
-				  <div class="thumbnail">
-					<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-					<a href="#" class="tag"></a>
-					<a  href="product_details.html"><img src="assets/img/i.jpg" alt=""></a>
-				  </div>
-				</li>
-				<li class="span3">
-				  <div class="thumbnail">
-					<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-					<a href="#" class="tag"></a>
-					<a  href="product_details.html"><img src="assets/img/g.jpg" alt=""></a>
-				  </div>
-				</li>
-				<li class="span3">
-				  <div class="thumbnail">
-					<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-					<a  href="product_details.html"><img src="assets/img/s.png" alt=""></a>
-				  </div>
-				</li>
-			  </ul>
-			  </div>
-		   <div class="item">
-		  <ul class="thumbnails">
-			<li class="span3">
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<a  href="product_details.html"><img src="assets/img/i.jpg" alt=""></a>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<a  href="product_details.html"><img src="assets/img/f.jpg" alt=""></a>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<a  href="product_details.html"><img src="assets/img/h.jpg" alt=""></a>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<a  href="product_details.html"><img src="assets/img/j.jpg" alt=""></a>
-			  </div>
-			</li>
-		  </ul>
-		  </div>
-		   </div>
-		  <a class="left carousel-control" href="#newProductCar" data-slide="prev">&lsaquo;</a>
-            <a class="right carousel-control" href="#newProductCar" data-slide="next">&rsaquo;</a>
-		  </div>
-		  </div>
+		
 		<div class="row-fluid">
 		  <ul class="thumbnails">
 			<li class="span4">
 			  <div class="thumbnail">
 				 
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+			
 				<a href="product_details.html"><img src="assets/img/b.jpg" alt=""></a>
 				<div class="caption cntr">
 					<p>Manicure & Pedicure</p>
@@ -288,7 +200,6 @@ New Products
 			</li>
 			<li class="span4">
 			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a href="product_details.html"><img src="assets/img/a.jpg" alt=""></a>
 				<div class="caption cntr">
 					<p>Manicure & Pedicure</p>
