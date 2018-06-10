@@ -176,6 +176,12 @@ Body Section
 			  <input type="text" name="nome" id="inputLname" placeholder="Nome">
 			</div>
 		 </div>
+		 <div class="control-group">
+			<label class="control-label" for="inputLname">Telefone <sup>*</sup></label>
+			<div class="controls">
+			  <input type="text" name="telefone" id="inputLname" placeholder="telefone">
+			</div>
+		 </div>
 		<div class="control-group">
 		<label class="control-label" for="inputEmail">Email <sup>*</sup></label>
 		<div class="controls">

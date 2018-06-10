@@ -100,6 +100,7 @@ class ObjetosController extends Controller
       
      // Forma de fazer sem a model:
        $insert = $this->objeto->insert([
+        'matricula'  => session()->get('matricula'),
         'nome' =>    $request->nome,
         'descricao' =>         $request->descricao,
         'imagem' =>        "imagens/".$nameFile

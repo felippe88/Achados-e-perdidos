@@ -10,7 +10,7 @@ class Usuarios extends Model
 
     
        protected $fillable = [
-        'matricula','senha','email','nome'
+        'matricula','senha','email','nome','telefone'
     ];
     
     

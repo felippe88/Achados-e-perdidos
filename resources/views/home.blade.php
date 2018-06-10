@@ -168,10 +168,16 @@ New Products
 			<li class="span4">
 			  <div class="thumbnail">
 				 
-			
-				<a href="product_details.html"><img src="assets/img/b.jpg" alt=""></a>
+				@forelse( $objetos as $objeto )
+				@forelse( $usuarios as $usuario )
+    		<a href="product_details.html"><img src="{{ $objeto->imagem }}" alt=""></a>
 				<div class="caption cntr">
-					<p>Manicure & Pedicure</p>
+					<p>{{ @if $objeto->matricula == $usuario->matricula
+						
+						$objeto->nome;
+						@endif
+					
+					}}</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					<div class="actionList">
@@ -180,6 +186,15 @@ New Products
 					</div> 
 					<br class="clr">
 				</div>
+			  
+			  
+    		@empty
+    		<p>nada</p>
+    		@endforelse
+    		@empty
+    		<p>nada</p>
+    		@endforelse
+				
 			  </div>
 			</li>
 			<li class="span4">

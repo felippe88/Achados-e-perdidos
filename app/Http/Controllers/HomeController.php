@@ -9,12 +9,16 @@ class HomeController extends Controller
     
     public function index()
     {
-          
+    $usuarios = \DB::select('select * from usuarios where matricula IN (select matricula from objetos)');
+    
     $objetos = \DB::table('objetos')->get();
-    return view('home',compact('objetos'));
+    return view('home',compact('objetos'),compact('usuarios'));
         
         
     }
+    
+    
+    
     
 
     
